@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .gallery-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden; /* Ensure the overflow is hidden to see only one image at a time */
+        }
+
+        .gallery {
+            display: flex;
+            transition: transform 1s ease; /* Transition for smooth sliding */
+        }
+
+        .gallery-img {
+            min-width: 100%;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px; /* Slightly larger font size for arrows */
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Image Gallery</div>
+    <div class="gallery-container">
+        <div class="gallery">
+            <!-- Cats -->
+            <img src="https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg" alt="img 1" class="gallery-img">
+            <img src="https://cdn.pixabay.com/photo/2015/06/03/13/13/cats-796437_1280.jpg" alt="img 2" class="gallery-img">
+            <img src="https://cdn.pixabay.com/photo/2015/03/27/13/16/cat-694730_1280.jpg" alt="img 3" class="gallery-img">
+            <img src="https://cdn.pixabay.com/photo/2015/01/31/12/36/cat-618470_1280.jpg" alt="img 4" class="gallery-img">
+            <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.jpg" alt="img 5" class="gallery-img">
+            <img src="https://cdn.pixabay.com/photo/2016/02/10/16/37/cat-1192026_1280.jpg" alt="img 6" class="gallery-img">
+            <img src="https://cdn.pixabay.com/photo/2016/07/10/21/47/cat-1508613_1280.jpg" alt="img 7" class="gallery-img">
+            <img src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_1280.jpg" alt="img 8" class="gallery-img">
+        </div>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function changeImage(direction) {
+            const gallery = document.querySelector('.gallery');
+            const images = document.querySelectorAll('.gallery-img');
+            const totalImages = images.length;
+
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            } else if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+
+            gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>
