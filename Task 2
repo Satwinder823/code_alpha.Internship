@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satwinder Kaur's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0.5em 0;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+        }
+
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #e0e0e0;
+            position: relative;
+            overflow: hidden;
+            animation: rotateSection 10s infinite linear;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #4CAF50;
+            object-fit: cover;
+        }
+
+        @keyframes rotateSection {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        section:hover {
+            animation-play-state: paused; /* Pauses rotation on hover */
+            background-color: #d0d0d0; /* Changes color on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Satwinder Kaur</h1>
+        <p>Aspiring Computer Science Professional</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#personal">Personal Info</a></li>
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#interests">Interests</a></li>
+        </ul>
+    </nav>
+    <main>
+        <img src="C:\Users\user\Downloads\girl dpimage.jpg" alt="Satwinder Kaur" class="profile-img">
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Phone: 98xxxxxxxx</p>
+            <p>Email: itzvirksatwinder823@gmail.com</p>
+            <p>Address: Patiala</p>
+        </section>
+        <section id="personal">
+            <h2>Personal Information</h2>
+            <p>Date of Birth: August 23, 2002</p>
+            <p>Father’s Name: Sukhwinder Singh</p>
+            <p>Mother’s Name: Ranjeet Kaur</p>
+        </section>
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>Aspiring computer science professional with a strong foundation in programming languages and web development. Seeking opportunities to leverage skills in C, C++, HTML, CSS, and AIOT training to contribute to innovative projects.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>BCA in Computer Science, Sri Guru Granth Sahib World University, Fatehgarh Sahib (Expected Graduation: May 2025)</p>
+            <p>12th Grade, Shri Guru Teg Bahadur Khalsa College, Akkar Patiala (2019)</p>
+            <p>10th Grade, Sen. Sec. Smart School Sahoke-Dhadriya, Sangrur (2017)</p>
+            <p>ITI Trade: Surface Ornamentation Techniques, ITI Women Rajpura (2021)</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Programming Languages: C, C++</p>
+            <p>Web Development: HTML, CSS</p>
+            <p>AIOT (Artificial Intelligence of Things)</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <h3>Ultrasonic Radar System</h3>
+            <p>Developed an ultrasonic radar system as part of AIOT training. The system uses ultrasonic sensors and a servo motor to detect objects and display relevant data.</p>
+            <ul>
+                <li>Servo Motor Integration: Implemented a servo motor to rotate the sensor through a 180-degree range, allowing the system to detect objects at various angles.</li>
+                <li>Distance and Angle Measurement: Utilized the ultrasonic sensor to measure the distance of objects and the angle at which they are detected by the servo motor.</li>
+                <li>Data Display: Designed a user interface using Flutter to display the distance and angle of detected objects in real-time.</li>
+            </ul>
+        </section>
+        <section id="training">
+            <h2>Training</h2>
+            <h3>AIOT (Artificial Intelligence of Things) Training</h3>
+            <p>Duration: 45 days</p>
+            <p>Completed an intensive 45-day training program on Artificial Intelligence of Things (AIOT), which involved learning how to integrate artificial intelligence with Internet of Things (IoT) devices.</p>
+            <ul>
+                <li>Understanding AIOT Concepts</li>
+                <li>Hands-on Projects</li>
+                <li>IoT Devices and Sensors</li>
+                <li>Data Analysis and Interpretation</li>
+                <li>Software and Tools</li>
+            </ul>
+        </section>
+        <section id="languages">
+            <h2>Languages</h2>
+            <p>English</p>
+            <p>Hindi</p>
+            <p>Punjabi</p>
+        </section>
+        <section id="interests">
+            <h2>Interests</h2>
+            <p>Learning coding</p>
+            <p>Listening to music</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Satwinder Kaur. All rights reserved.</p>
+    </footer>
+</body>
+</html>
